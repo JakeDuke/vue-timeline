@@ -60,7 +60,6 @@
       "prettier/prettier": [
         "warn",
         {
-          "#": "prettier config in here :)",
           "semi": false,
           "trailingComma": "none"
         }

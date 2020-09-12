@@ -28,9 +28,9 @@
               <div class="cd-timeline-card-content">
                 <p>{{ point.about }}</p>
               </div>
-              <div class="cd-timeline-title">
+              <em class="cd-timeline-title">
                 {{ point.registered }}
-              </div>
+              </em>
             </div>
           </div>
         </div>
@@ -44,9 +44,9 @@
               <div class="cd-timeline-card-content">
                 <p>{{ point.about }}</p>
               </div>
-              <div class="cd-timeline-title">
+              <em class="cd-timeline-title">
                 {{ point.registered }}
-              </div>
+              </em>
             </div>
           </div>
           <div class="cd-timeline-progress">
@@ -54,8 +54,7 @@
             <div class="cd-timeline-point" />
             <div class="cd-timeline-bar" />
           </div>
-          <div class="cd-timeline-card-pure">
-          </div>
+          <div class="cd-timeline-card-pure"></div>
         </div>
       </div>
     </div>
@@ -63,24 +62,20 @@
 </template>
 
 <script>
-import { Vue, Component } from 'vue-property-decorator'
+import { Vue, Component } from "vue-property-decorator"
 
 @Component({
   props: {
     points: {
       type: Array,
-      required: true,
-    },
-  },
+      required: true
+    }
+  }
 })
-
-export default class Timeline extends Vue {
-
-}
+export default class Timeline extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-
 .main {
   padding: 20px;
   margin-top: 30px;
@@ -151,5 +146,4 @@ export default class Timeline extends Vue {
 .cd-timeline-card-placeholder {
   flex: 3;
 }
-
 </style>

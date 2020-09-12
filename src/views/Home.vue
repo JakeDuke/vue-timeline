@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-    <Timeline :points="timelineData" />
+  <div class="container">
+    <Timeline :points="timelineDataSorted" />
   </div>
 </template>
 
@@ -16,8 +16,10 @@ import rawData from "@/assets/timeline.json"
   }
 })
 export default class Home extends Vue {
-  get timelineData () {
-    return rawData
+  get timelineDataSorted() {
+    return rawData.sort((a, b) => {
+      return new Date(a.registered).getTime() - new Date(b.registered).getTime()
+    })
   }
 }
 </script>
