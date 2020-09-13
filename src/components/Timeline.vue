@@ -28,8 +28,12 @@
               <div class="cd-timeline-card-content">
                 <p>{{ point.about }}</p>
               </div>
-              <em class="cd-timeline-title">
-                {{ point.registered }}
+              <div class="mb-2">
+                <b>Tags: </b>
+                <span>{{ formatTags(point.tags) }}</span>
+              </div>
+              <em>
+                <b>{{ point.registered }}</b>
               </em>
             </div>
           </div>
@@ -44,8 +48,12 @@
               <div class="cd-timeline-card-content">
                 <p>{{ point.about }}</p>
               </div>
-              <em class="cd-timeline-title">
-                {{ point.registered }}
+              <div class="mb-2">
+                <b>Tags: </b>
+                <span>{{ formatTags(point.tags) }}</span>
+              </div>
+              <em>
+                <b>{{ point.registered }}</b>
               </em>
             </div>
           </div>
@@ -54,7 +62,7 @@
             <div class="cd-timeline-point" />
             <div class="cd-timeline-bar" />
           </div>
-          <div class="cd-timeline-card-pure"></div>
+          <div class="cd-timeline-card-pure" />
         </div>
       </div>
     </div>
@@ -72,7 +80,11 @@ import { Vue, Component } from "vue-property-decorator"
     }
   }
 })
-export default class Timeline extends Vue {}
+export default class Timeline extends Vue {
+  formatTags(tags) {
+    return tags.join(", ")
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -113,10 +125,6 @@ export default class Timeline extends Vue {}
   border: 2px solid #c4c4c4;
 }
 
-.cd-timeline-title {
-  font-weight: bold;
-}
-
 .cd-timeline-block {
   position: relative;
   width: 90%;
@@ -141,9 +149,5 @@ export default class Timeline extends Vue {}
   flex-direction: column;
   flex: 1;
   align-items: center;
-}
-
-.cd-timeline-card-placeholder {
-  flex: 3;
 }
 </style>
