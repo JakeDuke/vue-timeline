@@ -21,7 +21,7 @@
             <div class="cd-timeline-bar" />
           </div>
           <div class="cd-timeline-card">
-            <div class="p-timeline-box current">
+            <div class="p-timeline-box">
               <h3 class="text-center">
                 {{ point.name.first }} {{ point.name.last }}
               </h3>
@@ -41,7 +41,7 @@
         <!-- LEFT BOX-->
         <div v-else class="cd-timeline-block">
           <div class="cd-timeline-card">
-            <div class="p-timeline-box current">
+            <div class="p-timeline-box">
               <h3 class="text-center">
                 {{ point.name.first }} {{ point.name.last }}
               </h3>
@@ -94,10 +94,6 @@ export default class Timeline extends Vue {
   font-size: 14px;
 }
 
-.about {
-  padding-top: 3em;
-}
-
 .p-timeline-box {
   padding: 20px;
   border-radius: 2px;
@@ -106,7 +102,6 @@ export default class Timeline extends Vue {
 .cd-timeline-card {
   text-align: left;
   flex: 3;
-  box-sizing: border-box;
   border: 1px solid #c4c4c4;
   border-radius: 15px;
   margin-right: -2px;
@@ -129,19 +124,11 @@ export default class Timeline extends Vue {
   position: relative;
   width: 90%;
   display: flex;
-  flex-direction: row;
-  align-items: stretch;
   margin: 0 auto;
 }
 
 .cd-timeline-card-pure {
-  box-sizing: border-box;
-  border: none;
   flex: 3;
-  text-align: right;
-  align-items: center;
-  display: flex;
-  justify-content: flex-end;
 }
 
 .cd-timeline-progress {

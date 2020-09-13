@@ -6,8 +6,9 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator"
+// Import component
 import Timeline from "@/components/Timeline.vue"
-
+// Import JSON
 import rawData from "@/assets/timeline.json"
 
 @Component({
